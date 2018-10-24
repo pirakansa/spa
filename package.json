@@ -1,0 +1,54 @@
+{
+  "name": "spa",
+  "version": "0.0.0",
+  "description": "Installation",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -fr html/scripts/*",
+    "build": "npm run-script clean && browserify js-src/index.js -o html/scripts/bundle.js -t babelify -g uglifyify -p licensify",
+    "debug": "npm run-script clean && browserify js-src/index.js -o html/scripts/bundle.js --debug -t [ babelify --sourceMap ]"
+  },
+  "engines": {
+    "node": "10.3.0",
+    "npm": "6.1.0"
+  },
+  "os": [
+    "linux",
+    "win32",
+    "aix",
+    "darwin",
+    "freebsd",
+    "openbsd",
+    "sunos"
+  ],
+  "cpu": [
+    "arm",
+    "arm64",
+    "ia32",
+    "mips",
+    "mipsel",
+    "ppc",
+    "ppc64",
+    "s390",
+    "s390x",
+    "x32",
+    "x64"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "7.1.2",
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "babelify": "10.0.0",
+    "browserify": "16.2.3",
+    "licensify": "3.1.3",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0",
+    "uglifyify": "5.0.1"
+  }
+}
